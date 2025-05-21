@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../style/analytics.module.css';
 
-const SampleChart = ({ color }) => {
+const SampleChart = ({ color }:{color:string}) => {
   return (
     <div style={{ 
       width: '100%', 
