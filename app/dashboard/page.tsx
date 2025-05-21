@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Home = () => {
+const dashboard
+ = () => {
   return (
     <div>
       
@@ -8,4 +9,5 @@ const Home = () => {
   )
 }
 
-export default Home
+export default dashboard
+
