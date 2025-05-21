@@ -1,0 +1,251 @@
+/* user-list.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2rem); /* Responsive font size */
+  font-weight: 700;
+  margin: 0;
+  color: black;
+}
+
+.addButton {
+  background: rgb(56, 56, 227);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.addButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(110, 69, 226, 0.3);
+}
+
+.userTable {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(110, 69, 226, 0.1);
+  overflow: hidden;
+  width: 100%;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns:
+    minmax(150px, 2fr) minmax(150px, 2fr) minmax(100px, 1fr)
+    minmax(100px, 1fr) minmax(120px, 1.5fr);
+  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  font-weight: 600;
+  color: #4a5568;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.userRow {
+  display: grid;
+  grid-template-columns:
+    minmax(150px, 2fr) minmax(150px, 2fr) minmax(100px, 1fr)
+    minmax(100px, 1fr) minmax(120px, 1.5fr);
+  padding: 1rem 1.5rem;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f1f5f9;
+  gap: 0.5rem;
+}
+
+.userRow:last-child {
+  border-bottom: none;
+}
+
+.userRow:hover {
+  background: #f8fafc;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0; /* Fix text overflow */
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.userInfo span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.status.active {
+  background: #e6fffa;
+  color: #38b2ac;
+}
+
+.status.inactive {
+  background: #fff5f5;
+  color: #f56565;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.viewBtn,
+.deleteBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.viewBtn {
+  background: rgba(110, 69, 226, 0.1);
+  color: #6e45e2;
+  text-decoration: none;
+}
+
+.viewBtn:hover {
+  background: rgba(110, 69, 226, 0.2);
+}
+
+.deleteBtn {
+  background: rgba(245, 101, 101, 0.1);
+  color: #f56565;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background: rgba(245, 101, 101, 0.2);
+}
+
+/* Tablet Layout (768px - 1024px) */
+@media (max-width: 1024px) {
+  .tableHeader,
+  .userRow {
+    grid-template-columns: minmax(120px, 1.5fr) minmax(150px, 2fr) minmax(
+        100px,
+        1fr
+      );
+  }
+
+  .tableHeader span:nth-child(4),
+  .tableHeader span:nth-child(5),
+  .userRow span:nth-child(4),
+  .userRow span:nth-child(5) {
+    display: none;
+  }
+
+  .actions {
+    display: flex;
+    grid-column: 3;
+  }
+}
+
+/* Mobile Layout (up to 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .addButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tableHeader,
+  .userRow {
+    grid-template-columns: 1fr 1fr;
+    padding: 0.75rem;
+  }
+
+  .tableHeader span:nth-child(3),
+  .userRow span:nth-child(3) {
+    display: none;
+  }
+
+  .userInfo {
+    flex-direction: row;
+    grid-column: span 2;
+  }
+
+  .actions {
+    grid-column: span 2;
+    justify-content: flex-end;
+  }
+
+  .status {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 480px) {
+  .userRow {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .userInfo {
+    grid-column: 1;
+  }
+
+  .status {
+    justify-self: start;
+  }
+
+  .actions {
+    grid-column: 1;
+    justify-content: flex-start;
+  }
+
+  .viewBtn,
+  .deleteBtn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}

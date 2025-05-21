@@ -12,7 +12,7 @@ const UserDetails = () => {
     status: "Active",
     lastActive: "2 hours ago",
     joinDate: "15 March 2022",
-    avatar: "pic.svg",
+    avatar: "/pic1.svg",
     bio: "Senior product designer with 8 years of experience. Leads the design team and oversees all creative projects.",
     permissions: ["Dashboard", "Users", "Settings", "Analytics", "Content"],
   };

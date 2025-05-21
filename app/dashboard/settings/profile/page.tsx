@@ -16,7 +16,7 @@ const Profile = () => {
           <div className={styles.avatarContainer}>
             <div className={styles.avatarWrapper}>
               <img 
-                src="pic.svg" 
+                src="/pic.svg" 
                 alt="Profile" 
                 
               />
