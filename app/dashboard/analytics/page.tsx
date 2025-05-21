@@ -26,7 +26,7 @@ const Analytics = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.title}>Analytics Dashboard</h1>
-        <p className={styles.subtitle}>Overview of your team's performance</p>
+        <p className={styles.subtitle}>Overview of your teams performance</p>
       </div>
 
       <div className={styles.dashboardGrid}>
