@@ -1,19 +1,14 @@
 import React from 'react';
-import Link from 'next/link'; 
-
+import Link from 'next/link';
+import styles from './style/home.module.css'
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 text-center">
-      <h1 className="text-4xl font-bold mb-4 text-gray-800">
-        Welcome to Dashboard App
-      </h1>
-      <p className="text-lg mb-8 text-gray-600">
-        Manage your tasks, track analytics and stay organized with our Powerfull dashboard
+    <div className={styles.container}>
+      <h1 className={styles.title}>Welcome to Dashboard App</h1>
+      <p className={styles.subtitle}>
+        Manage your tasks, track analytics and stay organized with our powerful dashboard
       </p>
-      <Link 
-        href="/dashboard" 
-        className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-      >
+      <Link href="/dashboard" className={styles.button}>
         Go to Dashboard
       </Link>
     </div>
