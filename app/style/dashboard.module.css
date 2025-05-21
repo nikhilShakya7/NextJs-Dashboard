@@ -1,0 +1,182 @@
+/* Main container styles */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 1rem;
+}
+
+.innerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Header styles */
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Grid and card styles */
+.tasksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.taskCard,
+.analyticsCard {
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.taskCard {
+  background: linear-gradient(145deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.taskCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
+  border-color: #93c5fd;
+}
+
+.taskCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+  transition: width 0.3s ease;
+}
+
+.taskCard:hover::before {
+  width: 8px;
+}
+
+.analyticsCard {
+  background: linear-gradient(145deg, #f5f3ff 0%, #ede9fe 100%);
+}
+
+.analyticsCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(109, 40, 217, 0.2);
+  border-color: #a78bfa;
+}
+
+.analyticsCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #8b5cf6, #a78bfa);
+  transition: width 0.3s ease;
+}
+
+.analyticsCard:hover::before {
+  width: 8px;
+}
+
+/* Card content styles */
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.taskTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  transition: color 0.3s ease;
+}
+
+.taskCard:hover .taskTitle {
+  color: #1d4ed8;
+}
+
+.analyticsCard:hover .taskTitle {
+  color: #6d28d9;
+}
+
+.taskCount {
+  font-size: 1.75rem;
+  transition: transform 0.3s ease;
+}
+
+.taskCard:hover .taskCount {
+  transform: scale(1.1);
+}
+
+.analyticsCard:hover .taskCount {
+  transform: scale(1.1);
+}
+
+.taskDescription {
+  color: #475569;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.taskCard:hover .taskDescription {
+  color: #334155;
+}
+
+.analyticsCard:hover .taskDescription {
+  color: #334155;
+}
+
+/* Add pulse animation for active cards */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.taskCard:active,
+.analyticsCard:active {
+  animation: pulse 0.3s ease;
+}
