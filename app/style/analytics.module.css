@@ -1,0 +1,116 @@
+/* analytics.module.css */
+.container {
+  padding: 2rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.cardValue {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cardChange {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.positive {
+  color: #10b981;
+}
+
+.negative {
+  color: #ef4444;
+}
+
+.chartContainer {
+  height: 200px;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.metricCard {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.usersMetric {
+  background-color: #f0f9ff;
+  border-left: 4px solid #0ea5e9;
+}
+
+.tasksMetric {
+  background-color: #f5f3ff;
+  border-left: 4px solid #8b5cf6;
+}
+
+.completionMetric {
+  background-color: #ecfdf5;
+  border-left: 4px solid #10b981;
+}
+
+.productivityMetric {
+  background-color: #fffbeb;
+  border-left: 4px solid #f59e0b;
+}
+
+.metricTitle {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.metricValue {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
