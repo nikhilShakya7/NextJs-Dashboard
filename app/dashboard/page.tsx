@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import styles from '../style/dashboard.module.css'
+import styles from '../style/dashboard.module.css';
 
 const Dashboard = () => {
   return (
@@ -27,9 +27,9 @@ const Dashboard = () => {
               <div className={styles.analyticsCard}>
                 <div className={styles.taskHeader}>
                   <h2 className={styles.taskTitle}>Analytics</h2>
-                  <span className={styles.taskCount}>📊</span>
+                  <span className={styles.taskCount}>📄</span>
                 </div>
-                <p className={styles.taskDescription}>Track your productivity and progress.</p>
+                <p className={styles.taskDescription}>View, Organize and manage your daily tasks.</p>
               </div>
             </Link>
 
@@ -37,9 +37,9 @@ const Dashboard = () => {
               <div className={styles.analyticsCard}>
                 <div className={styles.taskHeader}>
                   <h2 className={styles.taskTitle}>Settings</h2>
-                  <span className={styles.taskCount}>⚙️</span>
+                  <span className={styles.taskCount}>📄</span>
                 </div>
-                <p className={styles.taskDescription}>Configure your application preferences.</p>
+                <p className={styles.taskDescription}>View, Organize and manage your daily tasks.</p>
               </div>
             </Link>
 
@@ -47,9 +47,9 @@ const Dashboard = () => {
               <div className={styles.analyticsCard}>
                 <div className={styles.taskHeader}>
                   <h2 className={styles.taskTitle}>Users</h2>
-                  <span className={styles.taskCount}>👥</span>
+                  <span className={styles.taskCount}>📄</span>
                 </div>
-                <p className={styles.taskDescription}>Manage team members and permissions.</p>
+                <p className={styles.taskDescription}>View, Organize and manage your daily tasks.</p>
               </div>
             </Link>
           </div>
